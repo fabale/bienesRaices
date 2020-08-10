@@ -59,6 +59,10 @@ h4 {
 	display: block!important;
 }
 
+.contenido-centrado {
+	max-width: 800px;
+}
+
 /* Botones */
 
 .boton {
@@ -81,6 +85,11 @@ h4 {
 }
 
 /* Header */
+
+.side-header {
+	background-color: #333333;
+	padding-left: 1rem 0 3rem 0;
+}
 
 .side-header.inicio {
 	background-image: url(../img/header.jpg);
@@ -147,12 +156,14 @@ h4 {
 .contenedor-anuncios {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .anuncio {
-	flex-basis: calc(33.3% - 1rem);
+	flex: 0 0 calc(33.3% - 1rem);
 	border: solid #B5B5B5 1px;
 	background-color: #F5F5F5;
+	margin-bottom: 2rem;
 }
 
 .contenido-anuncio {
@@ -173,6 +184,8 @@ h4 {
 	padding: 0;
 	display: flex;
 	justify-content: space-evenly;
+	flex: 1;
+	max-width: 500px;
 }
 
 .icono-caracteristicas li {
@@ -314,3 +327,31 @@ h4 {
 	color: #FFFFFF;
 
 }
+
+/*** INTERNAS ***/
+/*** nosotros.html ***/
+
+.contenido-nosotros {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* fr quiere decir Fracción, o sea, dividir en dos partes de 1fr cada una */
+	grid-column-gap: 2rem;
+}
+
+.texto-nosotros blockquote {
+	font-weight: 900;
+	font-size: 2rem;
+	margin: 0;
+	padding: 1rem 0 3rem 0;
+}
+
+/*** anuncio.html ***/
+
+.resumen-propiedad {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+
+
